@@ -1,0 +1,51 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home Voice Control</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Smart Home Voice Control</h1>
+        <button id="start-voice-command">Start Voice Command</button>
+    </header>
+
+    <main>
+        <div id="simulation-container">
+            <!-- This will be a placeholder for the 3D simulation -->
+            <div id="3d-simulation"></div>
+        </div>
+
+        <div id="controls-container">
+            <div class="control" id="light-control">
+                <h2>Lighting</h2>
+                <div id="light-status">Current Status: Off</div>
+                <button id="light-toggle">Toggle Light</button> <!-- Manual button to toggle lights -->
+            </div>
+            <div class="control" id="temperature-control">
+                <h2>Temperature</h2>
+                <div id="temperature-status">Current Temperature: 22°C</div>
+                <button id="temperature-up">Increase Temperature</button> <!-- Manual button to increase temperature -->
+                <button id="temperature-down">Decrease Temperature</button> <!-- Manual button to decrease temperature -->
+            </div>
+            <div class="control" id="security-control">
+                <h2>Security</h2>
+                <div id="security-status">Security: Disabled</div>
+                <button id="security-toggle">Toggle Security</button> <!-- Manual button to toggle security -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Smart Home Control</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

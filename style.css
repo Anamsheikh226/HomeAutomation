@@ -1,0 +1,192 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0066ff;
+    color: #333;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+/* Header styling */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid #4CAF50;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* Button styling */
+button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    background-color: #51ff00cc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Main layout */
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 20px; /* Added gap for better spacing */
+}
+
+/* Simulation container */
+#simulation-container {
+    flex: 1;
+    min-width: 300px;
+    height: 500px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Controls container */
+#controls-container {
+    flex: 0.4;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 300px;
+}
+
+.control {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.control:hover {
+    transform: translateY(-5px);
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+/* Status icons before each status */
+#security-status::before, #camera-status::before, #door-lock-status::before, #alarm-status::before {
+    margin-right: 10px;
+}
+
+#camera-status::before {
+    content: '📷';
+}
+
+#door-lock-status::before {
+    content: '🔓';
+}
+
+#alarm-status::before {
+    content: '🔔';
+}
+
+#security-status::before {
+    content: '🛡️';
+}
+
+/* Responsive Design */
+/* For screens smaller than 1200px */
+@media screen and (max-width: 1200px) {
+    main {
+        flex-direction: row;
+    }
+    
+    #simulation-container, #controls-container {
+        flex: 1;
+    }
+}
+
+/* For tablets and smaller devices (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #simulation-container {
+        width: 100%;
+        height: 400px;
+    }
+
+    #controls-container {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+        font-size: 1.1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+/* For mobile devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    main {
+        padding: 10px;
+    }
+
+    #simulation-container {
+        height: 300px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .control h2 {
+        font-size: 1.5rem;
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+}
